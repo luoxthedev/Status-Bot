@@ -4,7 +4,7 @@ const Discord = require('discord.js');
 module.exports = {
   name: 'ready',
   async execute(bot) {
-    await bot.user.setPresence({ activities: [{ name: 'By nekrxs.', type: 5 }], status: 'idle' });
+    await bot.user.setPresence({ activities: [{ name: 'SilverCloud Status - dsc.gg/silverhost', type: 5 }], status: 'online' });
 
     let msg;
     const save = new Set();
@@ -50,7 +50,7 @@ module.exports = {
       }));
 
       const embedStatus = new Discord.EmbedBuilder()
-      .setTitle(`\`🪄\` ▸ Status of ${channel.guild.name}`)
+      .setTitle(`\`📶\` ▸ Status of ${channel.guild.name}`)
       .setDescription(`**Developers**\n${devs}\n**Bots**\n${bots}\n**Last update :**\n<t:${Math.floor(Date.now() / 1000)}:R>`)
       .setFooter({ text: channel.guild.name, iconURL: channel.guild.iconURL({ dynamic: true }) })
       .setColor(config.color)
